@@ -68,6 +68,14 @@ int print_reverse(va_list types, char buffer[], int flags, int width, int precis
 /* Function to print a string in rot 13 */
 int print_rot13string(va_list types, char buffer[], int flags, int width, int precision, int size);
 
+/* Function to print a reversed string */
+int print_reversed_string(va_list types, char buffer[],
+                          int flags, int width, int precision, int size);
+
+/* Function to print a rot13'ed string */
+int print_rot13_string(va_list types, char buffer[],
+                       int flags, int width, int precision, int size);
+
 /* width handler */
 int handle_write_char(char c, char buffer[], int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[], int flags, int width, int precision, int size);
@@ -84,4 +92,3 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
-
